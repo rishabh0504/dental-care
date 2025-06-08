@@ -1,0 +1,150 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "search": "Search",
+    "add": "Add",
+    "update": "Update",
+    "submit": "Submit",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "active": "ACTIVE",
+    "inactive": "INACTIVE",
+    "required": "Required"
+  },
+  "auth": {
+    "signin": "Sign In",
+    "signup": "Sign Up",
+    "signout": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "dateOfBirth": "Date of Birth",
+    "welcomeBack": "Welcome back to DentalCare",
+    "createAccount": "Create your DentalCare account",
+    "signingIn": "Signing in...",
+    "creatingAccount": "Creating account...",
+    "useDemoCredentials": "Use Demo Credentials",
+    "demoCredentials": "Demo Credentials:",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "invalidCredentials": "Invalid email or password",
+    "accountCreated": "Account created successfully! You can now sign in.",
+    "signedInAs": "Signed in as:",
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "passwordRequired": "Password is required",
+      "passwordMin": "Password must be at least 6 characters",
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "dobRequired": "Date of birth is required",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordsNoMatch": "Passwords don't match"
+    }
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "patients": "Patients",
+    "aiAssistant": "AI Assistant",
+    "settings": "Settings",
+    "patientManagement": "Patient Management"
+  },
+  "dashboard": {
+    "title": "Dental Clinic Dashboard",
+    "overview": "Dashboard Overview",
+    "welcomeMessage": "Welcome back! Here's what's happening at your clinic today.",
+    "totalPatients": "Total Patients",
+    "upcomingAppointments": "Upcoming Appointments",
+    "recentVisits": "Recent Visits",
+    "growthRate": "Growth Rate",
+    "activePatients": "active patients",
+    "nextDays": "Next 7 days",
+    "lastDays": "Last 30 days",
+    "fromLastMonth": "From last month",
+    "recentPatientsTitle": "Recent Patients",
+    "quickActions": "Quick Actions",
+    "scheduleAppointment": "Schedule New Appointment",
+    "scheduleAppointmentDesc": "Book a new patient appointment",
+    "viewTodaySchedule": "View Today's Schedule",
+    "viewTodayScheduleDesc": "Check appointments for today",
+    "patientReports": "Patient Reports",
+    "patientReportsDesc": "Generate patient reports",
+    "lastVisit": "Last visit:",
+    "age": "Age"
+  },
+  "patients": {
+    "title": "Patient Records",
+    "subtitle": "Manage and view all patient information",
+    "addPatient": "Add Patient",
+    "editPatient": "Edit Patient",
+    "addNewPatient": "Add New Patient",
+    "updatePatientInfo": "Update patient information",
+    "enterPatientDetails": "Enter patient details to create a new record",
+    "patientInformation": "Patient Information",
+    "allPatients": "All Patients",
+    "searchPatients": "Search patients...",
+    "patientDetails": "Patient Details",
+    "deleteConfirm": "Are you sure you want to delete this patient record?",
+    "viewDetails": "View Details",
+    "fields": {
+      "name": "Full Name",
+      "age": "Age",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "address": "Address",
+      "medicalHistory": "Medical History",
+      "lastVisit": "Last Visit Date",
+      "nextAppointment": "Next Appointment",
+      "status": "Status",
+      "contact": "Contact"
+    },
+    "placeholders": {
+      "name": "Enter patient's full name",
+      "age": "Enter age",
+      "email": "Enter email address",
+      "phone": "Enter phone number",
+      "address": "Enter full address",
+      "medicalHistory": "Enter relevant medical history, allergies, previous treatments..."
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "ageRequired": "Valid age is required",
+      "ageMin": "Age must be at least 1",
+      "ageMax": "Age must be less than 120",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "phoneRequired": "Phone number is required",
+      "addressRequired": "Address is required",
+      "lastVisitRequired": "Last visit date is required",
+      "nextAppointmentRequired": "Next appointment date is required"
+    }
+  },
+  "chatbot": {
+    "title": "AI Dental Assistant",
+    "subtitle": "Ask questions about dental care, treatments, or patient management",
+    "assistantName": "Dental AI Assistant",
+    "online": "Online",
+    "placeholder": "Ask about dental treatments, patient care, or clinic management...",
+    "quickActions": {
+      "toothDecay": "Tooth decay symptoms",
+      "cleaningFrequency": "Cleaning frequency",
+      "emergencyCare": "Emergency care"
+    }
+  },
+  "language": {
+    "english": "English",
+    "arabic": "العربية",
+    "switchLanguage": "Switch Language"
+  },
+  "brand": {
+    "name": "DentalCare"
+  }
+}

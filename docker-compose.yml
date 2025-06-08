@@ -1,0 +1,72 @@
+services:
+  postgres:
+    image: postgres:15
+    restart: no
+    environment:
+      POSTGRES_DB: dentalcare_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - dentalcare-network
+
+  backend:
+    build:
+      context: ./dental-care-be
+    container_name: dental-care-backend
+    restart: no
+    environment:
+      DATABASE_URL: "postgresql://postgres:mysecretpassword@postgres:5432/dentalcare_db?schema=public"
+      SECRET_KEY: "This is my custom token for jwt token creation"
+      ALGORITHM: "HS256"
+      ACCESS_TOKEN_EXPIRE_MINUTES: "30"
+      CORS_ORIGINS: '["http://localhost:3000","http://localhost:8000"]'
+    depends_on:
+      - postgres
+      - ollama
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./dental-care-be:/app
+    working_dir: /app
+    networks:
+      - dentalcare-network
+
+  frontend:
+    build:
+      context: ./dental-care-fe
+    container_name: dental-care-frontend
+    restart: no
+    environment:
+      NEXT_PUBLIC_OLLAMA_HOST: http://ollama:11434
+      NEXT_PUBLIC_BACKEND_ENDPOINT: http://backend:8000
+      JWT_SECRET: "This is my custom token for jwt token creation"
+    depends_on:
+      - backend
+      - ollama
+    ports:
+      - "3000:3000"
+    networks:
+      - dentalcare-network
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    restart: no
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    networks:
+      - dentalcare-network
+
+volumes:
+  pgdata:
+  ollama-data:
+
+networks:
+  dentalcare-network:
+    driver: bridge

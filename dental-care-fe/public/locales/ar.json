@@ -1,0 +1,150 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "search": "بحث",
+    "add": "إضافة",
+    "update": "تحديث",
+    "submit": "إرسال",
+    "close": "إغلاق",
+    "yes": "نعم",
+    "no": "لا",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "required": "مطلوب"
+  },
+  "auth": {
+    "signin": "تسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "signout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "dateOfBirth": "تاريخ الميلاد",
+    "welcomeBack": "مرحباً بعودتك إلى دنتال كير",
+    "createAccount": "إنشاء حساب دنتال كير الخاص بك",
+    "signingIn": "جاري تسجيل الدخول...",
+    "creatingAccount": "جاري إنشاء الحساب...",
+    "useDemoCredentials": "استخدام بيانات تجريبية",
+    "demoCredentials": "بيانات تجريبية:",
+    "dontHaveAccount": "ليس لديك حساب؟",
+    "alreadyHaveAccount": "لديك حساب بالفعل؟",
+    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+    "accountCreated": "تم إنشاء الحساب بنجاح! يمكنك الآن تسجيل الدخول.",
+    "signedInAs": "مسجل الدخول باسم:",
+    "validation": {
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "عنوان بريد إلكتروني غير صالح",
+      "passwordRequired": "كلمة المرور مطلوبة",
+      "passwordMin": "كلمة المرور يجب أن تكون 6 أحرف على الأقل",
+      "firstNameRequired": "الاسم الأول مطلوب",
+      "lastNameRequired": "اسم العائلة مطلوب",
+      "dobRequired": "تاريخ الميلاد مطلوب",
+      "confirmPasswordRequired": "يرجى تأكيد كلمة المرور",
+      "passwordsNoMatch": "كلمات المرور غير متطابقة"
+    }
+  },
+  "navigation": {
+    "dashboard": "لوحة التحكم",
+    "patients": "المرضى",
+    "aiAssistant": "المساعد الذكي",
+    "settings": "الإعدادات",
+    "patientManagement": "إدارة المرضى"
+  },
+  "dashboard": {
+    "title": "لوحة تحكم عيادة الأسنان",
+    "overview": "نظرة عامة على لوحة التحكم",
+    "welcomeMessage": "مرحباً بعودتك! إليك ما يحدث في عيادتك اليوم.",
+    "totalPatients": "إجمالي المرضى",
+    "upcomingAppointments": "المواعيد القادمة",
+    "recentVisits": "الزيارات الأخيرة",
+    "growthRate": "معدل النمو",
+    "activePatients": "مريض نشط",
+    "nextDays": "الأيام السبعة القادمة",
+    "lastDays": "آخر 30 يوماً",
+    "fromLastMonth": "من الشهر الماضي",
+    "recentPatientsTitle": "المرضى الأخيرون",
+    "quickActions": "إجراءات سريعة",
+    "scheduleAppointment": "جدولة موعد جديد",
+    "scheduleAppointmentDesc": "حجز موعد لمريض جديد",
+    "viewTodaySchedule": "عرض جدول اليوم",
+    "viewTodayScheduleDesc": "فحص مواعيد اليوم",
+    "patientReports": "تقارير المرضى",
+    "patientReportsDesc": "إنشاء تقارير المرضى",
+    "lastVisit": "آخر زيارة:",
+    "age": "العمر"
+  },
+  "patients": {
+    "title": "سجلات المرضى",
+    "subtitle": "إدارة وعرض جميع معلومات المرضى",
+    "addPatient": "إضافة مريض",
+    "editPatient": "تعديل المريض",
+    "addNewPatient": "إضافة مريض جديد",
+    "updatePatientInfo": "تحديث معلومات المريض",
+    "enterPatientDetails": "أدخل تفاصيل المريض لإنشاء سجل جديد",
+    "patientInformation": "معلومات المريض",
+    "allPatients": "جميع المرضى",
+    "searchPatients": "البحث عن المرضى...",
+    "patientDetails": "تفاصيل المريض",
+    "deleteConfirm": "هل أنت متأكد من أنك تريد حذف سجل هذا المريض؟",
+    "viewDetails": "عرض التفاصيل",
+    "fields": {
+      "name": "الاسم الكامل",
+      "age": "العمر",
+      "email": "عنوان البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "address": "العنوان",
+      "medicalHistory": "التاريخ الطبي",
+      "lastVisit": "تاريخ آخر زيارة",
+      "nextAppointment": "الموعد القادم",
+      "status": "الحالة",
+      "contact": "جهة الاتصال"
+    },
+    "placeholders": {
+      "name": "أدخل الاسم الكامل للمريض",
+      "age": "أدخل العمر",
+      "email": "أدخل عنوان البريد الإلكتروني",
+      "phone": "أدخل رقم الهاتف",
+      "address": "أدخل العنوان الكامل",
+      "medicalHistory": "أدخل التاريخ الطبي ذي الصلة، الحساسيات، العلاجات السابقة..."
+    },
+    "validation": {
+      "nameRequired": "الاسم مطلوب",
+      "ageRequired": "عمر صالح مطلوب",
+      "ageMin": "العمر يجب أن يكون على الأقل 1",
+      "ageMax": "العمر يجب أن يكون أقل من 120",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "عنوان بريد إلكتروني غير صالح",
+      "phoneRequired": "رقم الهاتف مطلوب",
+      "addressRequired": "العنوان مطلوب",
+      "lastVisitRequired": "تاريخ آخر زيارة مطلوب",
+      "nextAppointmentRequired": "تاريخ الموعد القادم مطلوب"
+    }
+  },
+  "chatbot": {
+    "title": "مساعد الأسنان الذكي",
+    "subtitle": "اسأل أسئلة حول رعاية الأسنان أو العلاجات أو إدارة المرضى",
+    "assistantName": "مساعد الأسنان الذكي",
+    "online": "متصل",
+    "placeholder": "اسأل عن علاجات الأسنان أو رعاية المرضى أو إدارة العيادة...",
+    "quickActions": {
+      "toothDecay": "أعراض تسوس الأسنان",
+      "cleaningFrequency": "تكرار التنظيف",
+      "emergencyCare": "الرعاية الطارئة"
+    }
+  },
+  "language": {
+    "english": "English",
+    "arabic": "العربية",
+    "switchLanguage": "تغيير اللغة"
+  },
+  "brand": {
+    "name": "دنتال كير"
+  }
+}

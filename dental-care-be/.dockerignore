@@ -1,0 +1,30 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Byte-compiled or virtualenv
+.venv/
+env/
+venv/
+poetry.lock
+
+# OS + IDE
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Env + config
+.env
+*.log
+
+# Docker
+Dockerfile
+.dockerignore

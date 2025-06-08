@@ -9,7 +9,7 @@ const log = {
 };
 
 export async function GET() {
-  const cookieStore = await cookies(); // ✅ Await here
+  const cookieStore = await cookies();
   const token = cookieStore.get("token")?.value;
 
   if (!token) {
@@ -21,7 +21,7 @@ export async function GET() {
     const decoded = jwt.verify(token, process.env.JWT_SECRET!) as {
       sub: string;
     };
-    log.info("Token verified successfully", { email: decoded.sub });
+    log.info("Token verified successfully: ", JSON.stringify(decoded));
     return NextResponse.json({ email: decoded.sub });
   } catch (err: any) {
     log.error("JWT verification failed", {

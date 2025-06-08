@@ -3,7 +3,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from jose import jwt, JWTError
 from app.core.config import settings
 
-EXEMPT_PATHS = ["/auth/signin", "/auth/signup", "/docs", "/openapi.json", "/favicon.ico"]
+EXEMPT_PATHS = ["/auth/signin", "/auth/signup", "/docs", "/openapi.json", "/favicon.ico","/chat"]
 
 class JWTAuthMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):

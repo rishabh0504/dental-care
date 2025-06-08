@@ -59,10 +59,24 @@ async def authenticate_user(user: UserSigninRequest):
             logger.warning(f"Authentication failed: Incorrect password - {user.email}")
             return None
 
+        # Find existing chat session or create one
+        chat_session = await prisma.chatsession.find_first(where={"userId": db_user.id})
+        if not chat_session:
+            chat_session = await prisma.chatsession.create(
+                data={
+                    "title": f"{db_user.firstName}'s Chat Session",
+                    "createdBy": db_user.email,
+                    "updatedBy": db_user.email,
+                    "userId": db_user.id
+                }
+            )
+
+        # Prepare JWT payload
         user_data = db_user.__dict__.copy()
         user_data.pop("password", None)
+        user_data["chatSessionId"] = chat_session.id  # <-- add chat session ID
 
-        # Convert datetime fields to string ISO format
+        # Convert datetime fields
         for key, value in user_data.items():
             if isinstance(value, datetime):
                 user_data[key] = value.isoformat()

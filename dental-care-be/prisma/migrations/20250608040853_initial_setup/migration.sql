@@ -1,5 +1,5 @@
 -- CreateEnum
-CREATE TYPE "PatientStatus" AS ENUM ('ACTIVE', 'INACTIVE', 'PENDING');
+CREATE TYPE "PatientStatus" AS ENUM ('ACTIVE', 'INACTIVE');
 
 -- CreateEnum
 CREATE TYPE "Role" AS ENUM ('user', 'assistant', 'system');
@@ -26,7 +26,7 @@ CREATE TABLE "ChatSession" (
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "createdBy" TEXT,
     "updatedBy" TEXT,
-    "userId" INTEGER,
+    "userId" INTEGER NOT NULL,
 
     CONSTRAINT "ChatSession_pkey" PRIMARY KEY ("id")
 );
@@ -64,10 +64,13 @@ CREATE TABLE "Patient" (
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "ChatSession_userId_key" ON "ChatSession"("userId");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "Patient_email_key" ON "Patient"("email");
 
 -- AddForeignKey
-ALTER TABLE "ChatSession" ADD CONSTRAINT "ChatSession_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE "ChatSession" ADD CONSTRAINT "ChatSession_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "ChatHistory" ADD CONSTRAINT "ChatHistory_sessionId_fkey" FOREIGN KEY ("sessionId") REFERENCES "ChatSession"("id") ON DELETE CASCADE ON UPDATE CASCADE;

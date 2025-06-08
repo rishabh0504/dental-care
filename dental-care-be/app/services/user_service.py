@@ -33,6 +33,15 @@ async def create_user(user: UserSignupRequest):
                 "password": hashed_password
             }
         )
+
+        new_chat_session = await prisma.chatsession.create(
+            data={
+                "title": f"{new_user.firstName}'s Chat Session",
+                "createdBy": new_user.email,
+                "updatedBy": new_user.email,
+                "userId": new_user.id
+            }
+        )
         logger.info(f"User created successfully: {user.email}")
         return new_user
     except Exception as e:
@@ -50,9 +59,19 @@ async def authenticate_user(user: UserSigninRequest):
             logger.warning(f"Authentication failed: Incorrect password - {user.email}")
             return None
 
-        token = create_access_token({"sub": db_user.email, "user_id": db_user.id})
+        user_data = db_user.__dict__.copy()
+        user_data.pop("password", None)
+
+        # Convert datetime fields to string ISO format
+        for key, value in user_data.items():
+            if isinstance(value, datetime):
+                user_data[key] = value.isoformat()
+
+        token = create_access_token(user_data)
+
         logger.info(f"User authenticated successfully: {user.email}")
         return {"access_token": token, "token_type": "bearer"}
+
     except Exception as e:
         logger.error(f"Error authenticating user {user.email}: {e}")
         raise

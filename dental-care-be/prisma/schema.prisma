@@ -18,19 +18,21 @@ model User {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  chatSessions ChatSession[]
+  chatSession ChatSession? // back relation to ChatSession (optional)
 }
 
 model ChatSession {
-  id          Int           @id @default(autoincrement())
-  title       String?
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
-  createdBy   String?
-  updatedBy   String?
+  id        Int      @id @default(autoincrement())
+  title     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  createdBy String?
+  updatedBy String?
+
+  user   User @relation(fields: [userId], references: [id])
+  userId Int  @unique
+
   chatHistory ChatHistory[]
-  User        User?         @relation(fields: [userId], references: [id])
-  userId      Int?
 }
 
 model ChatHistory {

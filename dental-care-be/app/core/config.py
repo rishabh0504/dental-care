@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     DATABASE_URL: str
     cors_origins: List[str] = []
+    OLLAMA_BASE_URL: str
 
     class Config:
         env_file = ".env"
